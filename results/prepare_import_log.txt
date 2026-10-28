@@ -1,0 +1,24 @@
+prepare_import started
+[customers] rows 228,000 | 3,581,935 bytes | 0.1 s
+[accounts] rows 248,000 | 5,212,728 bytes | 0.1 s
+[devices] rows 228,600 | 3,554,536 bytes | 0.1 s
+[account_devices] rows 285,600 | 6,284,515 bytes | 0.1 s
+[transfers] rows 20,003,300 | 780,197,873 bytes | 8.0 s
+[owns] rows 248,000 (sorted by customer_id, account_id) | 2.1 s
+======================================================================
+customers            228,000 expected      228,000  match True
+accounts             248,000 expected      248,000  match True
+devices              228,600 expected      228,600  match True
+account_devices      285,600 expected      285,600  match True
+transfers         20,003,300 expected   20,003,300  match True
+owns                 248,000 expected      248,000  match True
+Source CSVs unchanged: True
+
+Typed headers written to import_tmp:
+  customers.csv         customer_id:ID(Customer),region:string
+  accounts.csv          account_id:ID(Account),:IGNORE,role:string
+  devices.csv           device_id:ID(Device),access_type:string
+  account_devices.csv   :START_ID(Account),:END_ID(Device),first_day:int,last_day:int,observations:int
+  transfers.csv         transfer_id:long,:START_ID(Account),:END_ID(Account),occurred_at:long,amount_rwf:int
+  owns.csv              :START_ID(Customer),:END_ID(Account)
+Total 10.4 s

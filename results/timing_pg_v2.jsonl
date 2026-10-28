@@ -1,0 +1,36 @@
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "warmup", "run": 1, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.1172, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "warmup", "run": 2, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0127, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "warmup", "run": 3, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0161, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "measured", "run": 1, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0153, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "measured", "run": 2, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0171, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "measured", "run": 3, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0133, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "measured", "run": 4, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0097, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "engine": "pg_v2", "phase": "measured", "run": 5, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.0105, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-B-b4", "phase": "case_done", "status": "OK"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "warmup", "run": 1, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.2166, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "warmup", "run": 2, "start_cat": "2026-10-23 21:11:10", "status": "OK", "seconds": 0.1196, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "warmup", "run": 3, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0983, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "measured", "run": 1, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0683, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "measured", "run": 2, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0795, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "measured", "run": 3, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0654, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "measured", "run": 4, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0618, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "engine": "pg_v2", "phase": "measured", "run": 5, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0694, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-B-b6", "phase": "case_done", "status": "OK"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "warmup", "run": 1, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0164, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "warmup", "run": 2, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0137, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "warmup", "run": 3, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0142, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "measured", "run": 1, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0141, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "measured", "run": 2, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0101, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "measured", "run": 3, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0125, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "measured", "run": 4, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0134, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "engine": "pg_v2", "phase": "measured", "run": 5, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.0146, "rows": 1, "digest": "378dd0ad02a5c6549ef615f96ac265eb"}
+{"case": "Q7-E-b4", "phase": "case_done", "status": "OK"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "warmup", "run": 1, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.1431, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "warmup", "run": 2, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.125, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "warmup", "run": 3, "start_cat": "2026-10-23 21:11:11", "status": "OK", "seconds": 0.1187, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "measured", "run": 1, "start_cat": "2026-10-23 21:11:12", "status": "OK", "seconds": 0.1203, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "measured", "run": 2, "start_cat": "2026-10-23 21:11:12", "status": "OK", "seconds": 0.1219, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "measured", "run": 3, "start_cat": "2026-10-23 21:11:12", "status": "OK", "seconds": 0.0684, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "measured", "run": 4, "start_cat": "2026-10-23 21:11:12", "status": "OK", "seconds": 0.1265, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "engine": "pg_v2", "phase": "measured", "run": 5, "start_cat": "2026-10-23 21:11:12", "status": "OK", "seconds": 0.127, "rows": 1, "digest": "a186a70f4f8e69c36efb1e865941a768"}
+{"case": "Q7-E-b6", "phase": "case_done", "status": "OK"}

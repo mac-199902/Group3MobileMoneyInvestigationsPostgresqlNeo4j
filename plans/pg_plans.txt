@@ -1,0 +1,150 @@
+===== Q2 full month =====
+Sort  (cost=532234.08..533224.56 rows=396192 width=48) (actual time=32805.634..32812.247 rows=30.00 loops=1)
+  Sort Key: (to_char((to_timestamp((occurred_at)::double precision) AT TIME ZONE 'Africa/Kigali'::text), 'YYYY-MM-DD'::text))
+  Sort Method: quicksort  Memory: 26kB
+  Buffers: shared hit=867 read=146272
+  ->  Finalize HashAggregate  (cost=487472.62..495396.46 rows=396192 width=48) (actual time=32793.484..32810.347 rows=30.00 loops=1)
+        Group Key: (to_char((to_timestamp((occurred_at)::double precision) AT TIME ZONE 'Africa/Kigali'::text), 'YYYY-MM-DD'::text))
+        Batches: 1  Memory Usage: 8225kB
+        Buffers: shared hit=864 read=146272
+        ->  Gather  (cost=377331.23..480341.17 rows=950861 width=48) (actual time=32772.430..32799.744 rows=90.00 loops=1)
+              Workers Planned: 2
+              Workers Launched: 2
+              Buffers: shared hit=864 read=146272
+              ->  Partial HashAggregate  (cost=376331.23..384255.07 rows=396192 width=48) (actual time=32653.501..32662.553 rows=30.00 loops=3)
+                    Group Key: to_char((to_timestamp((occurred_at)::double precision) AT TIME ZONE 'Africa/Kigali'::text), 'YYYY-MM-DD'::text)
+                    Batches: 1  Memory Usage: 8225kB
+                    Buffers: shared hit=864 read=146272
+                    Worker 0:  Batches: 1  Memory Usage: 8225kB
+                    Worker 1:  Batches: 1  Memory Usage: 8225kB
+                    ->  Parallel Seq Scan on transfers  (cost=0.00..313823.44 rows=8334372 width=36) (actual time=5.096..26131.193 rows=6667766.67 loops=3)
+                          Buffers: shared hit=864 read=146272
+Planning:
+  Buffers: shared hit=181
+Planning Time: 21.069 ms
+Execution Time: 32831.211 ms
+
+===== Q4 set B depth 10 =====
+GroupAggregate  (cost=298.68..298.75 rows=4 width=16) (actual time=90.767..90.922 rows=5.00 loops=1)
+  Group Key: c.region
+  Buffers: shared hit=14285
+  CTE walk
+    ->  Recursive Union  (cost=0.00..266.22 rows=801 width=40) (actual time=0.011..67.389 rows=1187.00 loops=1)
+          Storage: Memory  Maximum Storage: 52kB
+          Buffers: shared hit=12458
+          ->  Result  (cost=0.00..0.01 rows=1 width=40) (actual time=0.003..0.003 rows=1.00 loops=1)
+          ->  Nested Loop  (cost=0.42..25.82 rows=80 width=40) (actual time=0.163..5.713 rows=201.82 loops=11)
+                Buffers: shared hit=12458
+                ->  WorkTable Scan on walk w  (cost=0.00..0.22 rows=3 width=40) (actual time=0.009..0.090 rows=87.09 loops=11)
+                      Filter: (depth < '10'::smallint)
+                      Rows Removed by Filter: 21
+                ->  Append  (cost=0.42..8.43 rows=4 width=72) (actual time=0.033..0.062 rows=2.32 loops=958)
+                      Buffers: shared hit=12458
+                      ->  Index Only Scan using ix_accounts_customer on accounts  (cost=0.42..1.91 rows=1 width=72) (actual time=0.012..0.012 rows=0.45 loops=958)
+                            Index Cond: (customer_id = w.id)
+                            Filter: (w.kind = 'Customer'::text)
+                            Rows Removed by Filter: 1
+                            Heap Fetches: 0
+                            Index Searches: 958
+                            Buffers: shared hit=2875
+                      ->  Index Scan using pk_accounts on accounts accounts_1  (cost=0.42..2.64 rows=1 width=72) (actual time=0.021..0.021 rows=0.44 loops=958)
+                            Index Cond: (account_id = w.id)
+                            Filter: (w.kind = 'Account'::text)
+                            Rows Removed by Filter: 1
+                            Index Searches: 958
+                            Buffers: shared hit=3832
+                      ->  Index Only Scan using pk_account_devices on account_devices  (cost=0.42..1.91 rows=1 width=72) (actual time=0.012..0.013 rows=0.59 loops=958)
+                            Index Cond: (account_id = w.id)
+                            Filter: (w.kind = 'Account'::text)
+                            Rows Removed by Filter: 1
+                            Heap Fetches: 0
+                            Index Searches: 958
+                            Buffers: shared hit=2875
+                      ->  Index Only Scan using ix_account_devices_device on account_devices account_devices_1  (cost=0.42..1.95 rows=1 width=72) (actual time=0.011..0.012 rows=0.83 loops=958)
+                            Index Cond: (device_id = w.id)
+                            Filter: (w.kind = 'Device'::text)
+                            Rows Removed by Filter: 1
+                            Heap Fetches: 0
+                            Index Searches: 958
+                            Buffers: shared hit=2876
+  ->  Sort  (cost=32.46..32.47 rows=4 width=8) (actual time=90.724..90.762 rows=228.00 loops=1)
+        Sort Key: c.region
+        Sort Method: quicksort  Memory: 25kB
+        Buffers: shared hit=14285
+        ->  Nested Loop  (cost=20.91..32.42 rows=4 width=8) (actual time=70.492..90.349 rows=228.00 loops=1)
+              Buffers: shared hit=14285
+              ->  Nested Loop  (cost=20.49..30.64 rows=4 width=4) (actual time=70.268..79.928 rows=228.00 loops=1)
+                    Buffers: shared hit=13373
+                    ->  Unique  (cost=20.07..20.09 rows=4 width=4) (actual time=70.056..70.656 rows=228.00 loops=1)
+                          Buffers: shared hit=12461
+                          ->  Sort  (cost=20.07..20.08 rows=4 width=4) (actual time=70.053..70.214 rows=649.00 loops=1)
+                                Sort Key: walk.id
+                                Sort Method: quicksort  Memory: 25kB
+                                Buffers: shared hit=12461
+                                ->  CTE Scan on walk  (cost=0.00..20.03 rows=4 width=4) (actual time=2.546..69.674 rows=649.00 loops=1)
+                                      Filter: ((id <> 147228) AND (kind = 'Account'::text))
+                                      Rows Removed by Filter: 538
+                                      Storage: Memory  Maximum Storage: 66kB
+                                      Buffers: shared hit=12458
+                    ->  Index Scan using pk_accounts on accounts a  (cost=0.42..2.64 rows=1 width=8) (actual time=0.039..0.039 rows=1.00 loops=228)
+                          Index Cond: (account_id = walk.id)
+                          Index Searches: 228
+                          Buffers: shared hit=912
+              ->  Index Scan using pk_customers on customers c  (cost=0.42..0.45 rows=1 width=12) (actual time=0.044..0.044 rows=1.00 loops=228)
+                    Index Cond: (customer_id = a.customer_id)
+                    Index Searches: 228
+                    Buffers: shared hit=912
+Planning:
+  Buffers: shared hit=140
+Planning Time: 26.919 ms
+Execution Time: 92.898 ms
+
+===== Q7 set B bound 6 =====
+Aggregate  (cost=3181.21..3181.22 rows=1 width=4) (actual time=58800.482..58800.785 rows=1.00 loops=1)
+  Buffers: shared hit=2775123
+  CTE walk
+    ->  Recursive Union  (cost=0.42..3102.17 rows=3161 width=8) (actual time=0.053..58241.488 rows=427955.00 loops=1)
+          Storage: Memory  Maximum Storage: 16689kB
+          Buffers: shared hit=2775123
+          ->  Index Scan using pk_accounts on accounts  (cost=0.42..2.64 rows=1 width=8) (actual time=0.046..0.098 rows=1.00 loops=1)
+                Index Cond: (account_id = 147228)
+                Filter: (role = 'person'::text)
+                Index Searches: 1
+                Buffers: shared hit=4
+          ->  Nested Loop  (cost=5.37..306.79 rows=316 width=8) (actual time=15.177..7790.813 rows=391993.00 loops=7)
+                Buffers: shared hit=2775119
+                ->  Nested Loop  (cost=4.94..21.59 rows=327 width=8) (actual time=15.113..5793.532 rows=795702.00 loops=7)
+                      Buffers: shared hit=1783127
+                      ->  WorkTable Scan on walk w  (cost=0.00..0.22 rows=3 width=8) (actual time=14.771..45.115 rows=26851.00 loops=7)
+                            Filter: (depth < '6'::smallint)
+                            Rows Removed by Filter: 34285
+                      ->  HashAggregate  (cost=4.94..6.03 rows=109 width=4) (actual time=0.189..0.201 rows=29.63 loops=187957)
+                            Group Key: transfers.receiver_id
+                            Batches: 1  Memory Usage: 32kB
+                            Buffers: shared hit=1783127
+                            ->  Index Only Scan using ix_transfers_sender_time on transfers  (cost=0.56..4.67 rows=109 width=4) (actual time=0.078..0.139 rows=77.51 loops=187957)
+                                  Index Cond: (sender_id = w.account_id)
+                                  Heap Fetches: 0
+                                  Index Searches: 187957
+                                  Buffers: shared hit=1783127
+                ->  Memoize  (cost=0.43..2.53 rows=1 width=4) (actual time=0.002..0.002 rows=0.49 loops=5569914)
+                      Cache Key: transfers.receiver_id
+                      Cache Mode: logical
+                      Hits: 5321916  Misses: 247998  Evictions: 0  Overflows: 0  Memory Usage: 24907kB
+                      Buffers: shared hit=991992
+                      ->  Index Scan using pk_accounts on accounts r  (cost=0.42..2.52 rows=1 width=4) (actual time=0.011..0.011 rows=0.97 loops=247998)
+                            Index Cond: (account_id = transfers.receiver_id)
+                            Filter: (role = 'person'::text)
+                            Rows Removed by Filter: 0
+                            Index Searches: 247998
+                            Buffers: shared hit=991992
+  ->  CTE Scan on walk  (cost=0.00..79.03 rows=5 width=4) (actual time=2317.382..58800.471 rows=2.00 loops=1)
+        Filter: ((depth > 0) AND (account_id = 186823))
+        Rows Removed by Filter: 427953
+        Storage: Memory  Maximum Storage: 17470kB
+        Buffers: shared hit=2775123
+Planning:
+  Buffers: shared hit=6
+Planning Time: 1.319 ms
+Execution Time: 58825.161 ms
+

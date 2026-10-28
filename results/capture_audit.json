@@ -1,0 +1,52 @@
+{
+  "customers": {
+    "consumed": 228000,
+    "written": 228000,
+    "expected": 228000,
+    "match": true,
+    "seconds": 0.9,
+    "csv_bytes": 3581915
+  },
+  "accounts": {
+    "consumed": 248000,
+    "written": 248000,
+    "expected": 248000,
+    "match": true,
+    "seconds": 1.4,
+    "csv_bytes": 5212713
+  },
+  "devices": {
+    "consumed": 228600,
+    "written": 228600,
+    "expected": 228600,
+    "match": true,
+    "seconds": 1.0,
+    "csv_bytes": 3554518
+  },
+  "account_devices": {
+    "consumed": 285600,
+    "written": 285600,
+    "expected": 285600,
+    "match": true,
+    "seconds": 1.9,
+    "csv_bytes": 6284489
+  },
+  "transfers": {
+    "consumed": 20003300,
+    "written": 20003300,
+    "expected": 20003300,
+    "match": true,
+    "seconds": 174.6,
+    "csv_bytes": 780197845,
+    "earliest_occurred_at": 1788235200,
+    "latest_occurred_at": 1790798399,
+    "earliest_cat": "2026-09-01 06:00:00 CAT",
+    "latest_cat": "2026-09-30 21:59:59 CAT",
+    "sum_amount_rwf": 231482327870
+  },
+  "_total": {
+    "rows": 20993500,
+    "seconds": 179.8,
+    "csv_bytes": 798831480
+  }
+}

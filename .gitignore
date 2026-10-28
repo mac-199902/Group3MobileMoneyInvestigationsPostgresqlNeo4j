@@ -1,0 +1,11 @@
+venv/
+csv/
+import_tmp/
+jdk21/
+neo4j/
+pgdata/
+start_session.bat
+__pycache__/
+*.pyc
+.env
+*.zip

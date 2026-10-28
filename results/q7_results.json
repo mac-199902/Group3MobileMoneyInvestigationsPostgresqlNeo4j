@@ -1,0 +1,134 @@
+{
+  "A-4": {
+    "set": "A",
+    "source": 998,
+    "dest": 24755,
+    "bound": 4,
+    "pg_length": 3,
+    "neo_length": 3,
+    "match": true,
+    "pg_seconds": 2.66,
+    "neo_seconds": 6.26
+  },
+  "B-4": {
+    "set": "B",
+    "source": 147228,
+    "dest": 186823,
+    "bound": 4,
+    "pg_length": null,
+    "neo_length": null,
+    "match": true,
+    "pg_seconds": 1.9,
+    "neo_seconds": 2.79
+  },
+  "C-4": {
+    "set": "C",
+    "source": 206978,
+    "dest": 6573,
+    "bound": 4,
+    "pg_length": null,
+    "neo_length": null,
+    "match": true,
+    "pg_seconds": 1.39,
+    "neo_seconds": 1.96
+  },
+  "D-4": {
+    "set": "D",
+    "source": 237998,
+    "dest": 21755,
+    "bound": 4,
+    "pg_length": 3,
+    "neo_length": 3,
+    "match": true,
+    "pg_seconds": 1.78,
+    "neo_seconds": 0.29
+  },
+  "E-4": {
+    "set": "E",
+    "source": 144228,
+    "dest": 183823,
+    "bound": 4,
+    "pg_length": null,
+    "neo_length": null,
+    "match": true,
+    "pg_seconds": 1.64,
+    "neo_seconds": 2.13
+  },
+  "F-4": {
+    "set": "F",
+    "source": 203978,
+    "dest": 3573,
+    "bound": 4,
+    "pg_length": null,
+    "neo_length": null,
+    "match": true,
+    "pg_seconds": 1.91,
+    "neo_seconds": 1.6
+  },
+  "A-6": {
+    "set": "A",
+    "source": 998,
+    "dest": 24755,
+    "bound": 6,
+    "pg_length": 3,
+    "neo_length": 3,
+    "match": true,
+    "pg_seconds": 46.72,
+    "neo_seconds": 2.42
+  },
+  "B-6": {
+    "set": "B",
+    "source": 147228,
+    "dest": 186823,
+    "bound": 6,
+    "pg_length": 5,
+    "neo_length": 5,
+    "match": true,
+    "pg_seconds": 39.8,
+    "neo_seconds": 0.58
+  },
+  "C-6": {
+    "set": "C",
+    "source": 206978,
+    "dest": 6573,
+    "bound": 6,
+    "pg_length": 5,
+    "neo_length": 5,
+    "match": true,
+    "pg_seconds": 33.65,
+    "neo_seconds": 0.67
+  },
+  "D-6": {
+    "set": "D",
+    "source": 237998,
+    "dest": 21755,
+    "bound": 6,
+    "pg_length": 3,
+    "neo_length": 3,
+    "match": true,
+    "pg_seconds": 39.25,
+    "neo_seconds": 0.11
+  },
+  "E-6": {
+    "set": "E",
+    "source": 144228,
+    "dest": 183823,
+    "bound": 6,
+    "pg_length": 5,
+    "neo_length": 5,
+    "match": true,
+    "pg_seconds": 39.86,
+    "neo_seconds": 0.93
+  },
+  "F-6": {
+    "set": "F",
+    "source": 203978,
+    "dest": 3573,
+    "bound": 6,
+    "pg_length": 5,
+    "neo_length": 5,
+    "match": true,
+    "pg_seconds": 39.48,
+    "neo_seconds": 1.01
+  }
+}

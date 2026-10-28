@@ -1,0 +1,40 @@
+/******** QUERY *********/
+TRUNCATE transfers, account_devices, accounts, devices, customers;
+/************************/
+
+TRUNCATE TABLE
+/******** QUERY *********/
+ALTER TABLE transfers DROP CONSTRAINT IF EXISTS fk_transfers_sender;
+/************************/
+
+ALTER TABLE
+/******** QUERY *********/
+ALTER TABLE transfers DROP CONSTRAINT IF EXISTS fk_transfers_receiver;
+/************************/
+
+ALTER TABLE
+/******** QUERY *********/
+COPY  customers FROM STDIN CSV HEADER
+/************************/
+
+COPY 228000
+/******** QUERY *********/
+COPY  devices FROM STDIN CSV HEADER
+/************************/
+
+COPY 228600
+/******** QUERY *********/
+COPY  accounts FROM STDIN CSV HEADER
+/************************/
+
+COPY 248000
+/******** QUERY *********/
+COPY  account_devices FROM STDIN CSV HEADER
+/************************/
+
+COPY 285600
+/******** QUERY *********/
+COPY  transfers FROM STDIN CSV HEADER
+/************************/
+
+COPY 20003300

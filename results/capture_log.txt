@@ -1,0 +1,43 @@
+2026-10-20 18:27:57  Capture started. Period: 1 to 30 September 2026 CAT
+2026-10-20 18:27:57  [customers] started -> D:\MobileMoneyProject\csv\customers.csv
+2026-10-20 18:27:58  [customers] done: consumed 228,000, written 228,000, 0.9 s, 0.004 GB
+2026-10-20 18:27:58  [accounts] started -> D:\MobileMoneyProject\csv\accounts.csv
+2026-10-20 18:28:00  [accounts] done: consumed 248,000, written 248,000, 1.4 s, 0.005 GB
+2026-10-20 18:28:00  [devices] started -> D:\MobileMoneyProject\csv\devices.csv
+2026-10-20 18:28:01  [devices] done: consumed 228,600, written 228,600, 1.0 s, 0.004 GB
+2026-10-20 18:28:01  [account_devices] started -> D:\MobileMoneyProject\csv\account_devices.csv
+2026-10-20 18:28:03  [account_devices] done: consumed 285,600, written 285,600, 1.9 s, 0.006 GB
+2026-10-20 18:28:03  [transfers] started -> D:\MobileMoneyProject\csv\transfers.csv
+2026-10-20 18:28:13  [transfers]  1,000,000 rows written (11 s)
+2026-10-20 18:28:26  [transfers]  2,000,000 rows written (23 s)
+2026-10-20 18:28:41  [transfers]  3,000,000 rows written (38 s)
+2026-10-20 18:28:51  [transfers]  4,000,000 rows written (48 s)
+2026-10-20 18:29:01  [transfers]  5,000,000 rows written (59 s)
+2026-10-20 18:29:12  [transfers]  6,000,000 rows written (70 s)
+2026-10-20 18:29:23  [transfers]  7,000,000 rows written (81 s)
+2026-10-20 18:29:34  [transfers]  8,000,000 rows written (91 s)
+2026-10-20 18:29:42  [transfers]  9,000,000 rows written (99 s)
+2026-10-20 18:29:50  [transfers] 10,000,000 rows written (107 s)
+2026-10-20 18:29:57  [transfers] 11,000,000 rows written (115 s)
+2026-10-20 18:30:04  [transfers] 12,000,000 rows written (122 s)
+2026-10-20 18:30:15  [transfers] 13,000,000 rows written (132 s)
+2026-10-20 18:30:22  [transfers] 14,000,000 rows written (140 s)
+2026-10-20 18:30:28  [transfers] 15,000,000 rows written (146 s)
+2026-10-20 18:30:34  [transfers] 16,000,000 rows written (152 s)
+2026-10-20 18:30:40  [transfers] 17,000,000 rows written (158 s)
+2026-10-20 18:30:46  [transfers] 18,000,000 rows written (163 s)
+2026-10-20 18:30:52  [transfers] 19,000,000 rows written (169 s)
+2026-10-20 18:30:57  [transfers] 20,000,000 rows written (175 s)
+2026-10-20 18:30:57  [transfers] done: consumed 20,003,300, written 20,003,300, 174.6 s, 0.780 GB
+2026-10-20 18:30:57  ==========================================================================
+2026-10-20 18:30:57  stream              consumed     written    expected  match  seconds  CSV GB
+2026-10-20 18:30:57  customers            228,000     228,000     228,000   True      0.9   0.004
+2026-10-20 18:30:57  accounts             248,000     248,000     248,000   True      1.4   0.005
+2026-10-20 18:30:57  devices              228,600     228,600     228,600   True      1.0   0.004
+2026-10-20 18:30:57  account_devices      285,600     285,600     285,600   True      1.9   0.006
+2026-10-20 18:30:57  transfers         20,003,300  20,003,300  20,003,300   True    174.6   0.780
+2026-10-20 18:30:57  TOTAL rows 20,993,500 (expected 20,993,500) in 179.8 s, CSV 0.799 GB
+2026-10-20 18:30:57  transfers: count 20,003,300 | sum amount_rwf 231,482,327,870
+2026-10-20 18:30:57  transfers: earliest 1788235200 = 2026-09-01 06:00:00 CAT
+2026-10-20 18:30:57  transfers: latest   1790798399 = 2026-09-30 21:59:59 CAT
+2026-10-20 18:30:57  Audit saved: results\capture_audit.json
